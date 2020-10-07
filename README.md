@@ -1,5 +1,5 @@
 # Library app
-Android app for book data consultation.
+Android app for book data consulting.
 
 ## Features of the Project:
 - [x] Visualize books in a Recycle View;
