@@ -13,9 +13,9 @@ public class BookItem implements Parcelable {
     private String mDescription;
     private int mPages;
 
-    public BookItem(int imageResource, String bookTitle, String author, int year, String publisher, String description, int pages){
-        mCover = imageResource;
-        mBookTitle = bookTitle;
+    public BookItem(int cover, String title, String author, int year, String publisher, String description, int pages){
+        mCover = cover;
+        mBookTitle = title;
         mAuthor = author;
         mYear = year;
         mPublisher = publisher;
@@ -23,8 +23,8 @@ public class BookItem implements Parcelable {
         mPages = pages;
     }
 
-    public BookItem(int imageResource, String bookTitle, String author){
-        mCover = imageResource;
+    public BookItem(int cover, String bookTitle, String author){
+        mCover = cover;
         mBookTitle = bookTitle;
         mAuthor = author;
     }
@@ -32,6 +32,7 @@ public class BookItem implements Parcelable {
     public BookItem(String bookTitle, String author){
         mBookTitle = bookTitle;
         mAuthor = author;
+        mCover = R.drawable.image_unavailable;
     }
 
     protected BookItem(Parcel in) {
@@ -82,6 +83,34 @@ public class BookItem implements Parcelable {
 
     public int getPages() {
         return mPages;
+    }
+
+    public void setCover(int mCover) {
+        this.mCover = mCover;
+    }
+
+    public void setBookTitle(String mBookTitle) {
+        this.mBookTitle = mBookTitle;
+    }
+
+    public void setAuthor(String mAuthor) {
+        this.mAuthor = mAuthor;
+    }
+
+    public void setYear(int mYear) {
+        this.mYear = mYear;
+    }
+
+    public void setPublisher(String mPublisher) {
+        this.mPublisher = mPublisher;
+    }
+
+    public void setDescription(String mDescription) {
+        this.mDescription = mDescription;
+    }
+
+    public void setPages(int mPages) {
+        this.mPages = mPages;
     }
 
     @Override

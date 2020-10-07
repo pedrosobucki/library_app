@@ -46,7 +46,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
         holder.mImageView.setImageResource(item.getCover());
         holder.mBookTitle.setText(item.getBookTitle());
         holder.mAuthor.setText(item.getAuthor());
-        holder.mYear.setText(Integer.toString(item.getYear()));
+        if(item.getYear() != 0){
+            holder.mYear.setText(Integer.toString(item.getYear()));
+        }else{
+            holder.mYear.setText("");
+        }
+
     }
 
     @Override

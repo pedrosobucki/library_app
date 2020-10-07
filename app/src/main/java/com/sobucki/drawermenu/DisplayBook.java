@@ -32,12 +32,41 @@ public class DisplayBook extends AppCompatActivity {
         description = findViewById(R.id.description);
         pages = findViewById(R.id.displayPagesInf);
 
+        //set cover
         cover.setImageResource(book.getCover());
+
+        //set tile
         title.setText(book.getBookTitle());
+
+        //set author
         author.setText(book.getAuthor());
-        year.setText(Integer.toString(book.getYear()));
-        publisher.setText(book.getPublisher());
-        description.setText("\t\t"+book.getDescription());
-        pages.setText(Integer.toString(book.getPages()));
+
+        //set year
+        if(book.getYear() == 0){
+            year.setText("Not available!");
+        }else {
+            year.setText(Integer.toString(book.getYear()));
+        }
+
+        //set publisher
+        if(book.getPublisher() == null){
+            publisher.setText("Not available!");
+        }else{
+            publisher.setText(book.getPublisher());
+        }
+
+        //set description
+        if(book.getDescription() == null){
+            description.setText("No description available!");
+        }else {
+            description.setText("\t\t" + book.getDescription());
+        }
+
+        //set pages
+        if(book.getPages() == 0){
+            pages.setText("Not available!");
+        }else{
+            pages.setText(Integer.toString(book.getPages()));
+        }
     }
 }
