@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="#F4EED7"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp">
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
+            android:padding="2dp"
+            android:foreground="@drawable/rounded_image"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/bookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:textSize="35dp"
+            android:text="Book Title"
+            app:layout_constraintLeft_toRightOf="@+id/cover"
+            tools:ignore="MissingConstraints">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/bookAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23dp"
+            android:text="Book Author"
+            app:layout_constraintLeft_toLeftOf="@+id/bookTitle"
+            app:layout_constraintTop_toBottomOf="@+id/bookTitle">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/bookPublishYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23dp"
+            android:text="Year"
+            android:layout_marginLeft="2dp"
+            app:layout_constraintLeft_toRightOf="@+id/coma"
+            app:layout_constraintBottom_toBottomOf="@+id/bookAuthor">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/coma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23dp"
+            android:text=","
+            app:layout_constraintLeft_toRightOf="@+id/bookAuthor"
+            app:layout_constraintBottom_toBottomOf="@+id/bookAuthor">
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
